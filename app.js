@@ -4,7 +4,10 @@ const path = require('path')
 
 const publicPath = path.resolve(__dirname,'public')
 
+// Inicializo PORT en render ó servidor 3000 ruta localhost:3033
+
 const port = process.env.PORT || 3000;
+
 
 app.use(express.static(publicPath))
 
@@ -29,5 +32,5 @@ app.post("/login", (req, res) =>{
 })
 
 app.listen(port, () =>{
-    console.log("Servidor corriendo");
+    console.log("Servidor corriendo en puerto 3000");
 })
